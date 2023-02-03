@@ -1,0 +1,53 @@
+{% extends "layout.html" %} {% block page %}
+<div class="d-flex justify-content-center">
+  <div class="d-flex flex-column justify-content-center py-4">
+    <div class="fs-2 d-flex justify-content-center">Register Here</div>
+    <div
+      class="mt-4 d-flex flex-column justify-content-center border rounded border-dark py-4 px-4"
+    >
+      <form method="post">
+        <p>{{form.username.label}} : {{form.username(size=20)}}</p>
+        {% if form.username.errors %}
+        <ul class="errors">
+          {% for error in form.username.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        <p>{{form.email.label}} : {{form.email()}}</p>
+        {% if form.email.errors %}
+        <ul class="errors">
+          {% for error in form.email.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        <p>{{form.password.label}} : {{form.password()}}</p>
+        {% if form.password.errors %}
+        <ul class="errors">
+          {% for error in form.password.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        <p>{{form.confirmpassword.label}} : {{form.confirmpassword()}}</p>
+        {% if form.confirmpassword.errors %}
+        <ul class="errors">
+          {% for error in form.confirmpassword.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        <div class="mt-4 d-flex justify-content-center">
+          <button
+            type="submit"
+            class="py-2 px-3 text-white rounded bg-primary border"
+          >
+            Register
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock page %}

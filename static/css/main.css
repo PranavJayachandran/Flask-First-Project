@@ -1,0 +1,38 @@
+.onhover:hover {
+  color: black;
+  background: white;
+}
+.onhover {
+  cursor: pointer;
+  border: solid;
+  background: #000;
+  color: white;
+  transition: all ease 0.3s;
+}
+.login {
+  color: whitesmoke;
+  transition: all ease 0.3s;
+  padding: 5px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.login:hover {
+  background: whitesmoke;
+  color: black;
+}
+
+.register {
+  color: whitesmoke;
+  transition: all ease 0.3s;
+  padding: 5px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.register:hover {
+  background: whitesmoke;
+  color: black;
+}
+
+a {
+  all: unset;
+}
